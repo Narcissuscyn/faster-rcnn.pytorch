@@ -3,10 +3,10 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import datasets
+import lib.datasets as datasets
 import numpy as np
-from model.utils.config import cfg
-from datasets.factory import get_imdb
+from lib.model.utils.config import cfg
+from lib.datasets.factory import get_imdb
 import PIL
 import pdb
 
@@ -44,7 +44,7 @@ def prepare_roidb(imdb):
     # max overlap > 0 => class should not be zero (must be a fg class)
     nonzero_inds = np.where(max_overlaps > 0)[0]
     assert all(max_classes[nonzero_inds] != 0)
-
+    # imdb.roidb=roidb????????????????????????????????????????????
 
 def rank_roidb_ratio(roidb):
     # rank roidb based on the ratio between width and height.
@@ -106,9 +106,9 @@ def combined_roidb(imdb_names, training=True):
     return imdb.roidb
   
   def get_roidb(imdb_name):
-    imdb = get_imdb(imdb_name)
+    imdb = get_imdb(imdb_name)# return the imdb data by vg()
     print('Loaded dataset `{:s}` for training'.format(imdb.name))
-    imdb.set_proposal_method(cfg.TRAIN.PROPOSAL_METHOD)
+    imdb.set_proposal_method(cfg.TRAIN.PROPOSAL_METHOD)#gt
     print('Set proposal method: {:s}'.format(cfg.TRAIN.PROPOSAL_METHOD))
     roidb = get_training_roidb(imdb)
     return roidb

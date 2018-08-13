@@ -3,6 +3,7 @@
 # Licensed under The MIT License [see LICENSE for details]
 # Written by Jiasen Lu, Jianwei Yang, based on code from Ross Girshick
 # --------------------------------------------------------
+#CUDA_VISIBLE_DEVICES=0 /home/new/software/anaconda3/bin/python3 train_vrd.py --dataset vrd --net res101 --bs 4 --nw 4 --lr 0.005 --lr_decay_step 5 --cuda
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
@@ -20,6 +21,7 @@ import torch
 from torch.autograd import Variable
 import torch.nn as nn
 import torch.optim as optim
+
 import torchvision.transforms as transforms
 from torch.utils.data.sampler import Sampler
 
@@ -32,9 +34,6 @@ from lib.model.utils.net_utils import weights_normal_init, save_net, load_net, \
 from lib.model.faster_rcnn.vgg16 import vgg16
 from lib.model.faster_rcnn.resnet import resnet
 
-import os
-os.environ["CUDA_VISIBLE_DEVICES"]="1"
-
 def parse_args():
   """
   Parse input arguments
@@ -42,7 +41,7 @@ def parse_args():
   parser = argparse.ArgumentParser(description='Train a Fast R-CNN network')
   parser.add_argument('--dataset', dest='dataset',
                       help='training dataset',
-                      default='vg', type=str)
+                      default='pascal_voc', type=str)
   parser.add_argument('--net', dest='net',
                     help='vgg16, res101',
                     default='vgg16', type=str)
@@ -60,23 +59,23 @@ def parse_args():
                       default=10000, type=int)
 
   parser.add_argument('--save_dir', dest='save_dir',
-                      help='directory to save models', default="mymodel",
+                      help='directory to save models', default="mymodel2",
                       type=str)
   parser.add_argument('--nw', dest='num_workers',
                       help='number of worker to load data',
-                      default=4, type=int)
+                      default=0, type=int)
   parser.add_argument('--cuda', dest='cuda',
                       help='whether use CUDA',
-                      action='store_true',default=True)
+                      action='store_true')
   parser.add_argument('--ls', dest='large_scale',
                       help='whether use large imag scale',
-                      action='store_true')                      
+                      action='store_true')
   parser.add_argument('--mGPUs', dest='mGPUs',
                       help='whether use multiple GPUs',
-                      action='store_true',default=False)
+                      action='store_true')
   parser.add_argument('--bs', dest='batch_size',
                       help='batch_size',
-                      default=4, type=int)
+                      default=1, type=int)
   parser.add_argument('--cag', dest='class_agnostic',
                       help='whether perform class_agnostic bbox regression',
                       action='store_true')
@@ -98,7 +97,7 @@ def parse_args():
 # set training session
   parser.add_argument('--s', dest='session',
                       help='training session',
-                      default=1, type=int)
+                      default=2, type=int)
 
 # resume trained model
   parser.add_argument('--r', dest='resume',
@@ -109,10 +108,10 @@ def parse_args():
                       default=1, type=int)
   parser.add_argument('--checkepoch', dest='checkepoch',
                       help='checkepoch to load model',
-                      default=3, type=int)
+                      default=1, type=int)
   parser.add_argument('--checkpoint', dest='checkpoint',
                       help='checkpoint to load model',
-                      default=47975, type=int)
+                      default=0, type=int)
 # log and diaplay
   parser.add_argument('--use_tfboard', dest='use_tfboard',
                       help='whether use tensorflow tensorboard',
@@ -180,6 +179,11 @@ if __name__ == '__main__':
       # train scale: ['150-50-20', '150-50-50', '500-150-80', '750-250-150', '1750-700-450', '1600-400-20']
       args.imdb_name = "vg_150-50-50_minitrain"
       args.imdbval_name = "vg_150-50-50_minival"
+      args.set_cfgs = ['ANCHOR_SCALES', '[4, 8, 16, 32]', 'ANCHOR_RATIOS', '[0.5,1,2]', 'MAX_NUM_GT_BOXES', '50']
+
+  elif args.dataset == "vrd":
+      args.imdb_name = "vrd_100-70-0_minitrain"
+      args.imdbval_name = "vrd_100-70-0_minival"
       args.set_cfgs = ['ANCHOR_SCALES', '[4, 8, 16, 32]', 'ANCHOR_RATIOS', '[0.5,1,2]', 'MAX_NUM_GT_BOXES', '50']
 
   args.cfg_file = "cfgs/{}_ls.yml".format(args.net) if args.large_scale else "cfgs/{}.yml".format(args.net)

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e4a30b94-8502-4102-922f-ac2f1275efd5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/lib/datasets/VOCdevkit-matlab-wrapper/get_voc_opts.m" beforeDir="false" afterPath="$PROJECT_DIR$/lib/datasets/VOCdevkit-matlab-wrapper/get_voc_opts.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/datasets/VOCdevkit-matlab-wrapper/voc_eval.m" beforeDir="false" afterPath="$PROJECT_DIR$/lib/datasets/VOCdevkit-matlab-wrapper/voc_eval.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/datasets/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/datasets/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/datasets/coco.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/datasets/coco.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/datasets/ds_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/datasets/ds_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/datasets/factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/datasets/factory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/datasets/imagenet.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/datasets/imagenet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/datasets/imdb.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/datasets/imdb.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/datasets/pascal_voc.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/datasets/pascal_voc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/datasets/pascal_voc_rbg.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/datasets/pascal_voc_rbg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/datasets/tools/mcg_munge.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/datasets/tools/mcg_munge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/datasets/vg.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/datasets/vg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/datasets/vg_eval.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/datasets/vg_eval.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/datasets/voc_eval.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/datasets/voc_eval.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/make.sh" beforeDir="false" afterPath="$PROJECT_DIR$/lib/make.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/faster_rcnn/faster_rcnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/faster_rcnn/faster_rcnn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/faster_rcnn/resnet.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/faster_rcnn/resnet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/faster_rcnn/vgg16.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/faster_rcnn/vgg16.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/nms/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/nms/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/nms/_ext/nms/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/nms/_ext/nms/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/nms/build.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/nms/build.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/nms/make.sh" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/nms/make.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/nms/nms_cpu.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/nms/nms_cpu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/nms/nms_gpu.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/nms/nms_gpu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/nms/nms_kernel.cu" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/nms/nms_kernel.cu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/nms/nms_wrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/nms/nms_wrapper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/nms/src/nms_cuda.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/nms/src/nms_cuda.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/nms/src/nms_cuda.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/nms/src/nms_cuda.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/nms/src/nms_cuda_kernel.cu" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/nms/src/nms_cuda_kernel.cu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/nms/src/nms_cuda_kernel.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/nms/src/nms_cuda_kernel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_align/_ext/roi_align/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_align/_ext/roi_align/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_align/build.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_align/build.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_align/functions/roi_align.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_align/functions/roi_align.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_align/make.sh" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_align/make.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_align/modules/roi_align.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_align/modules/roi_align.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_align/src/roi_align.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_align/src/roi_align.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_align/src/roi_align.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_align/src/roi_align.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_align/src/roi_align_cuda.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_align/src/roi_align_cuda.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_align/src/roi_align_cuda.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_align/src/roi_align_cuda.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_align/src/roi_align_kernel.cu" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_align/src/roi_align_kernel.cu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_align/src/roi_align_kernel.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_align/src/roi_align_kernel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_crop/_ext/crop_resize/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_crop/_ext/crop_resize/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_crop/_ext/roi_crop/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_crop/_ext/roi_crop/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_crop/build.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_crop/build.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_crop/functions/crop_resize.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_crop/functions/crop_resize.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_crop/functions/gridgen.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_crop/functions/gridgen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_crop/functions/roi_crop.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_crop/functions/roi_crop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_crop/make.sh" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_crop/make.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_crop/modules/gridgen.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_crop/modules/gridgen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_crop/modules/roi_crop.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_crop/modules/roi_crop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_crop/src/roi_crop.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_crop/src/roi_crop.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_crop/src/roi_crop.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_crop/src/roi_crop.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_crop/src/roi_crop_cuda.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_crop/src/roi_crop_cuda.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_crop/src/roi_crop_cuda.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_crop/src/roi_crop_cuda.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_crop/src/roi_crop_cuda_kernel.cu" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_crop/src/roi_crop_cuda_kernel.cu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_crop/src/roi_crop_cuda_kernel.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_crop/src/roi_crop_cuda_kernel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_pooling/_ext/roi_pooling/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_pooling/_ext/roi_pooling/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_pooling/build.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_pooling/build.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_pooling/functions/roi_pool.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_pooling/functions/roi_pool.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_pooling/modules/roi_pool.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_pooling/modules/roi_pool.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_pooling/src/roi_pooling.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_pooling/src/roi_pooling.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_pooling/src/roi_pooling.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_pooling/src/roi_pooling.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_pooling/src/roi_pooling_cuda.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_pooling/src/roi_pooling_cuda.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_pooling/src/roi_pooling_cuda.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_pooling/src/roi_pooling_cuda.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_pooling/src/roi_pooling_kernel.cu" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_pooling/src/roi_pooling_kernel.cu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/roi_pooling/src/roi_pooling_kernel.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/roi_pooling/src/roi_pooling_kernel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/rpn/anchor_target_layer.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/rpn/anchor_target_layer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/rpn/bbox_transform.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/rpn/bbox_transform.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/rpn/generate_anchors.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/rpn/generate_anchors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/rpn/proposal_layer.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/rpn/proposal_layer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/rpn/proposal_target_layer_cascade.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/rpn/proposal_target_layer_cascade.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/rpn/rpn.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/rpn/rpn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/utils/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/utils/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/utils/bbox.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/utils/bbox.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/utils/bbox.pyx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/utils/bbox.pyx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/utils/blob.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/utils/blob.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/utils/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/utils/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/utils/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/utils/logger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/utils/net_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/utils/net_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pycocotools/UPSTREAM_REV" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pycocotools/UPSTREAM_REV" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pycocotools/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pycocotools/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pycocotools/_mask.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pycocotools/_mask.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pycocotools/_mask.pyx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pycocotools/_mask.pyx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pycocotools/coco.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pycocotools/coco.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pycocotools/cocoeval.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pycocotools/cocoeval.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pycocotools/license.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pycocotools/license.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pycocotools/mask.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pycocotools/mask.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pycocotools/maskApi.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pycocotools/maskApi.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pycocotools/maskApi.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pycocotools/maskApi.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/roi_data_layer/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/roi_data_layer/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/roi_data_layer/minibatch.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/roi_data_layer/minibatch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/roi_data_layer/roibatchLoader.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/roi_data_layer/roibatchLoader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/roi_data_layer/roidb.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/roi_data_layer/roidb.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trainval_net.py" beforeDir="false" afterPath="$PROJECT_DIR$/trainval_net.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-580295782">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="148" />
+    <option name="y" value="-8" />
+    <option name="width" value="1444" />
+    <option name="height" value="970" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="faster-rcnn.pytorch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="faster-rcnn.pytorch" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e4a30b94-8502-4102-922f-ac2f1275efd5" name="Default Changelist" comment="" />
+      <created>1534165605523</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1534165605523</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.253212" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="File Transfer" order="9" visible="true" weight="0.32914287" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="13" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info active="true" anchor="right" id="Remote Host" order="3" visible="true" weight="0.32976446" />
+      <window_info anchor="right" id="SciView" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+</project>

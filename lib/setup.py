@@ -13,6 +13,8 @@ from distutils.core import setup
 from distutils.extension import Extension
 from Cython.Distutils import build_ext
 
+import distutils.sysconfig
+distutils.sysconfig.get_config_var('LINKFORSHARED')
 
 def find_in_path(name, path):
     "Find a file in a search path"

@@ -26,14 +26,14 @@ except NameError:
     xrange = range  # Python 3
 
 
-class vg(imdb):
+class vrd(imdb):
     def __init__(self, version, image_set, ):
-        imdb.__init__(self, 'vg_' + version + '_' + image_set)
+        imdb.__init__(self, 'vrd_' + version + '_' + image_set)
         self._version = version
         self._image_set = image_set
-        self._data_path = os.path.join(cfg.DATA_DIR, 'genome')
+        self._data_path = os.path.join(cfg.DATA_DIR, 'vrd')
         # self._img_path = os.path.join(cfg.DATA_DIR, 'vg')
-        self._img_path="/home/new/file/dataset/VG1.4/vg"
+        self._img_path="/home/new/file/dataset/VRD"
         # VG specific config options
         self.config = {'cleanup' : True}
 
@@ -41,7 +41,7 @@ class vg(imdb):
         self._classes = ['__background__']
         self._class_to_ind = {}
         self._class_to_ind[self._classes[0]] = 0#the class:background label is 0
-        with open(os.path.join(self._data_path, self._version, 'objects_vocab.txt')) as f:
+        with open(os.path.join(self._data_path, self._version, 'objects_vocab_100.txt')) as f:
           count = 1
           for object in f.readlines():
             names = [n.lower().strip() for n in object.split(',')]
@@ -67,7 +67,7 @@ class vg(imdb):
         self._relations = ['__no_relation__']
         self._relation_to_ind = {}
         self._relation_to_ind[self._relations[0]] = 0
-        with open(os.path.join(self._data_path, self._version, 'relations_vocab.txt')) as f:
+        with open(os.path.join(self._data_path, self._version, 'relations_vocab_70.txt')) as f:
           count = 1
           for rel in f.readlines():
             names = [n.lower().strip() for n in rel.split(',')]
@@ -79,22 +79,22 @@ class vg(imdb):
 
         self._image_ext = '.jpg'
         load_index_from_file = False
-        if os.path.exists(os.path.join(self._data_path, "vg_image_index_{}.p".format(self._image_set))):
-            with open(os.path.join(self._data_path, "vg_image_index_{}.p".format(self._image_set)), 'rb') as fp:
+        if os.path.exists(os.path.join(self._data_path, "vrd_image_index_{}.p".format(self._image_set))):
+            with open(os.path.join(self._data_path, "vrd_image_index_{}.p".format(self._image_set)), 'rb') as fp:
                 self._image_index = pickle.load(fp)
             load_index_from_file = True
 
         load_id_from_file = False
-        if os.path.exists(os.path.join(self._data_path, "vg_id_to_dir_{}.p".format(self._image_set))):
-            with open(os.path.join(self._data_path, "vg_id_to_dir_{}.p".format(self._image_set)), 'rb') as fp:
+        if os.path.exists(os.path.join(self._data_path, "vrd_id_to_dir_{}.p".format(self._image_set))):
+            with open(os.path.join(self._data_path, "vrd_id_to_dir_{}.p".format(self._image_set)), 'rb') as fp:
                 self._id_to_dir = pickle.load(fp)
             load_id_from_file = True
 
         if not load_index_from_file or not load_id_from_file:
             self._image_index, self._id_to_dir = self._load_image_set_index()
-            with open(os.path.join(self._data_path, "vg_image_index_{}.p".format(self._image_set)), 'wb') as fp:
+            with open(os.path.join(self._data_path, "vrd_image_index_{}.p".format(self._image_set)), 'wb') as fp:
                 pickle.dump(self._image_index, fp)
-            with open(os.path.join(self._data_path, "vg_id_to_dir_{}.p".format(self._image_set)), 'wb') as fp:
+            with open(os.path.join(self._data_path, "vrd_id_to_dir_{}.p".format(self._image_set)), 'wb') as fp:
                 pickle.dump(self._id_to_dir, fp)
 
         self._roidb_handler = self.gt_roidb
@@ -120,19 +120,26 @@ class vg(imdb):
         folder = self._id_to_dir[index]
         image_path = os.path.join(self._img_path, folder,
                                   str(index) + self._image_ext)
+
+        if not os.path.exists(image_path):
+
+            image_path=image_path[:-4]+".png"
+
+        # if not os.path.exists(image_path):
+        #     image_path = image_path[:-4] + ".gif"
         assert os.path.exists(image_path), \
                 'Path does not exist: {}'.format(image_path)
         return image_path
 
     def _image_split_path(self):
         if self._image_set == "minitrain":
-          return os.path.join(self._data_path, 'train.txt')
+          return os.path.join(self._data_path, 'vrd_train.txt')
         if self._image_set == "smalltrain":
-          return os.path.join(self._data_path, 'train.txt')
+          return os.path.join(self._data_path, 'vrd_train.txt')
         if self._image_set == "minival":
-          return os.path.join(self._data_path, 'val.txt')
+          return os.path.join(self._data_path, 'vrd_val.txt')
         if self._image_set == "smallval":
-          return os.path.join(self._data_path, 'val.txt')
+          return os.path.join(self._data_path, 'vrd_val.txt')
         else:
           return os.path.join(self._data_path, self._image_set+'.txt')
 
@@ -161,7 +168,7 @@ class vg(imdb):
         id_to_dir = {}
         for line in metadata:
           im_file,ann_file = line.split()
-          image_id = int(ann_file.split('/')[-1].split('.')[0])
+          image_id = ann_file.split('/')[-1].split('.')[0]
           filename = self._annotation_path(image_id)
           if os.path.exists(filename):
               # Some images have no bboxes after object filtering, so there
@@ -191,7 +198,7 @@ class vg(imdb):
             print('{} gt roidb loaded from {}'.format(self.name, cache_file))
             return roidb
 
-        gt_roidb = [self._load_vg_annotation(index)
+        gt_roidb = [self._load_vrd_annotation(index)
                     for index in self.image_index]
         fid = gzip.open(cache_file,'wb')
         pickle.dump(gt_roidb, fid, pickle.HIGHEST_PROTOCOL)
@@ -205,7 +212,7 @@ class vg(imdb):
     def _annotation_path(self, index):
         return os.path.join(self._data_path, 'xml', str(index) + '.xml')
 
-    def _load_vg_annotation(self, index):
+    def _load_vrd_annotation(self, index):
         """
         Load image and bounding boxes info from XML file in the PASCAL VOC
         format.
@@ -300,7 +307,7 @@ class vg(imdb):
             for cls in self._classes:
                 if cls == '__background__':
                     continue
-                filename = self._get_vg_results_file_template(output_dir).format(cls)
+                filename = self._get_vrd_results_file_template(output_dir).format(cls)
                 os.remove(filename)
 
     def evaluate_attributes(self, all_boxes, output_dir):
@@ -310,10 +317,10 @@ class vg(imdb):
             for cls in self._attributes:
                 if cls == '__no_attribute__':
                     continue
-                filename = self._get_vg_results_file_template(output_dir).format(cls)
+                filename = self._get_vrd_results_file_template(output_dir).format(cls)
                 os.remove(filename)
 
-    def _get_vg_results_file_template(self, output_dir):
+    def _get_vrd_results_file_template(self, output_dir):
         filename = 'detections_' + self._image_set + '_{:s}.txt'
         path = os.path.join(output_dir, filename)
         return path
@@ -322,8 +329,8 @@ class vg(imdb):
         for cls_ind, cls in enumerate(classes):
             if cls == '__background__':
                 continue
-            print('Writing "{}" vg results file'.format(cls))
-            filename = self._get_vg_results_file_template(output_dir).format(cls)
+            print('Writing "{}" vrd results file'.format(cls))
+            filename = self._get_vrd_results_file_template(output_dir).format(cls)
             with open(filename, 'wt') as f:
                 for im_ind, index in enumerate(self.image_index):
                     dets = all_boxes[cls_ind][im_ind]
@@ -356,7 +363,7 @@ class vg(imdb):
         for i, cls in enumerate(classes):
             if cls == '__background__' or cls == '__no_attribute__':
                 continue
-            filename = self._get_vg_results_file_template(output_dir).format(cls)
+            filename = self._get_vrd_results_file_template(output_dir).format(cls)
             rec, prec, ap, scores, npos = vg_eval(
                 filename, gt_roidb, self.image_index, i, ovthresh=0.5,
                 use_07_metric=use_07_metric, eval_attributes=eval_attributes)
@@ -408,6 +415,6 @@ class vg(imdb):
 
 
 if __name__ == '__main__':
-    d = vg('val')
+    d = vrd('val')
     res = d.roidb
     from IPython import embed; embed()

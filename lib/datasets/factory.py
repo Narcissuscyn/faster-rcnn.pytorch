@@ -11,10 +11,11 @@ from __future__ import division
 from __future__ import print_function
 
 __sets = {}
-from datasets.pascal_voc import pascal_voc
-from datasets.coco import coco
-from datasets.imagenet import imagenet
-from datasets.vg import vg
+from lib.datasets.pascal_voc import pascal_voc
+from lib.datasets.coco import coco
+from lib.datasets.imagenet import imagenet
+from lib.datasets.vg import vg
+from lib.datasets.vrd import vrd
 
 import numpy as np
 
@@ -32,7 +33,7 @@ for year in ['2014']:
 
 # Set up coco_2014_cap_<split>
 for year in ['2014']:
-  for split in ['train', 'val', 'capval', 'valminuscapval', 'trainval']:
+  for split in ['train', 'val', 'capval', 'valminuscapval', 'trainval'] :
     name = 'coco_{}_{}'.format(year, split)
     __sets[name] = (lambda split=split, year=year: coco(split, year))
 
@@ -47,11 +48,17 @@ for year in ['2015']:
 #     for split in ['minitrain', 'train', 'minival', 'val', 'test']:
 #         name = 'vg_{}_{}'.format(version,split)
 #         __sets[name] = (lambda split=split, version=version: vg(version, split))
-for version in ['150-50-20', '150-50-50', '500-150-80', '750-250-150', '1750-700-450', '1600-400-20']:
+for version in ['150-50-20', '150-50-50', '500-150-80', '750-250-150', '1750-700-450', '1600-400-20','100-70-0']:
     for split in ['minitrain', 'smalltrain', 'train', 'minival', 'smallval', 'val', 'test']:
-        name = 'vg_{}_{}'.format(version,split)
-        __sets[name] = (lambda split=split, version=version: vg(version, split))
-        
+        if version =="100-70-0":
+            name = 'vrd_{}_{}'.format(version,split)
+            __sets[name] = (lambda split=split, version=version: vrd(version, split))
+
+        else:
+            name = 'vg_{}_{}'.format(version, split)
+
+            __sets[name] = (lambda split=split, version=version: vg(version, split))
+
 # set up image net.
 for split in ['train', 'val', 'val1', 'val2', 'test']:
     name = 'imagenet_{}'.format(split)
